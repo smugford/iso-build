@@ -12,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run build script
-        run: ./.github/configure.sh
+        run: configure.sh
         shell: bash
