@@ -10,6 +10,9 @@ sudo sfdisk /dev/nbd0  << EOF
 1024,82
 ;
 EOF
+ls -la /dev/nbd0*
+echo "*****"
+echo "*****"
 sudo mkswap /dev/nbd0p1
 sudo mkfs.ext4 /dev/nbd0p2
 sudo modinfo nbd
