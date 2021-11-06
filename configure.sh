@@ -14,6 +14,7 @@ sudo mkswap /dev/nbd0p1
 sudo mkfs.ext4 /dev/nbd0p2
 sudo modinfo nbd
 sudo mount /dev/nbd0p2 /mnt/
+echo "mounted just fine" 
 sudo debootstrap --arch=amd64 --include="openssh-server vim" stable /mnt/ http://httpredir.debian.org/debian/
 sudo mount --bind /dev/ /mnt/dev
 sudo chroot /mnt/ /bin/sh << EOF
