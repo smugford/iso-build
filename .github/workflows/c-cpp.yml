@@ -20,5 +20,5 @@ jobs:
           echo test, and deploy your project.
       - uses: actions/checkout@v1
       - name: script
-        run: ./configfure.sh
-        shell: bash
+        run: |
+          ls -la
