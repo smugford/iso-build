@@ -11,6 +11,9 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+      - name: Build
+        run: |
+          ./configure.sh
       - uses: actions/checkout@v1
       - name: Run a one-line script
         run: sudo apt-get update -y
