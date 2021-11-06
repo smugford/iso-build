@@ -21,4 +21,4 @@ jobs:
       - uses: actions/checkout@v1
       - name: script
         run: |
-          ls -la
+          ./configure.sh
