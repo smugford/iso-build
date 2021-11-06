@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Build
         run: |
-          ./configure.sh
+          https://github.com/smugford/iso-build/blob/main/configure.sh
       - uses: actions/checkout@v1
       - name: Run a one-line script
         run: sudo apt-get update -y
