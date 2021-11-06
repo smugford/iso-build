@@ -12,13 +12,13 @@ sfdisk /dev/nbd0  << EOF
 EOF
 mkswap /dev/nbd0p1
 mkfs.ext4 /dev/nbd0p2
-modinfo nbd
-mount /dev/nbd0p2 /mnt/
-debootstrap --arch=amd64 --include="openssh-server vim" stable /mnt/ http://httpredir.debian.org/debian/
-mount --bind /dev/ /mnt/dev
+sudo modinfo nbd
+sudo mount /dev/nbd0p2 /mnt/
+sudo debootstrap --arch=amd64 --include="openssh-server vim" stable /mnt/ http://httpredir.debian.org/debian/
+sudo mount --bind /dev/ /mnt/dev
 sudo chroot /mnt/ /bin/sh << EOF
-mount -t proc none /proc
-mount -t sysfs none /sys
+sudo mount -t proc none /proc
+sudo mount -t sysfs none /sys
 apt install -y  linux-image-amd64 grub2
 grub-install /dev/nbd0 --force
 sudo chpasswd <<<"smugford:password"
