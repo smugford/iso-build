@@ -1,7 +1,7 @@
 #!/bin/bash
 
-apt-get -qq update
-apt-get -qq install -y --no-install-recommends \
+sudo apt-get -qq update
+sudo apt-get -qq install -y --no-install-recommends \
 build-essential \
 curl \
 e2fsprogs \
