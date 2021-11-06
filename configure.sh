@@ -1,10 +1,10 @@
 !/bin/bash
 # Create Debian Base Using qemu/chroot
 # needs to be run as root
-apt update
-apt install -y qemu qemu-kvm debootstrap
+sudo apt update
+sudo apt install -y qemu qemu-kvm debootstrap
 qemu-img create -f qcow2 debian.img 10G
-modprobe nbd max_part=8
+sudo modprobe nbd max_part=8
 qemu-nbd --format=raw --connect=/dev/nbd0 debian.img
 sfdisk /dev/nbd0  << EOF
 1024,82
